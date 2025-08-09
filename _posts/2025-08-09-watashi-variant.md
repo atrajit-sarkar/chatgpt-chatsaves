@@ -2,8 +2,8 @@
 layout: page
 title: "わたし instead 私 why?"
 date: 2025-08-07
-categories: [tech, portfolio, development]
-tags: [jekyll, portfolio, tech-stack, web-development]
+categories: [Hiragana, Katakana, Kanji, Japanese]
+tags: [japanese, hiragana, katakana, kanji]
 excerpt: "Demonstration of difference between two writing styles Hiragana, Kanji, Katakana."
 ---
 
@@ -30,4 +30,3 @@ It’s not a difference in meaning, but in style, tone, and context:
 
 So — **わたし** is just the hiragana spelling of **私**. Once you get comfortable with kanji, you’ll mostly see and use 私 in real-world reading and writing.
 
-If you want, I can give you a quick chart showing *all the main ways to write “I” in Japanese* and when to use each.
