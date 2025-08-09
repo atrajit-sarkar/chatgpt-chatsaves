@@ -1,0 +1,83 @@
+# Site settings
+title: ChatGPT Chat Saves - AI Conversation Archive
+email: chatgpt@atrajit.one
+description: >-
+  Your personal archive for ChatGPT conversations ✨ | Save, organize, and revisit your AI chats
+  A collaborative space where friends share and explore meaningful AI conversations
+baseurl: "" # Only if using project site, leave empty for personal site
+url: "https://www.atrajit.one"
+
+# Author information
+author:
+  name: ChatGPT Chat Saves
+  email: chatgpt@atrajit.one
+  tagline: "AI Conversations | Shared Wisdom | Friend Quest"
+  subtitle: "Where AI Meets Human Curiosity"
+  bio: >-
+    A collaborative platform for storing and sharing meaningful ChatGPT conversations.
+    Join our friend quest to explore the depths of AI-human interaction and discover
+    the wisdom hidden in our daily chats with artificial intelligence.
+
+# Tech Stack - Removed since this is now a chat storage site
+# Keeping the structure for potential future features
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Kramdown settings for math
+kramdown:
+  math_engine: mathjax
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+# Navigation - Simplified for chat storage site
+navigation:
+  - title: Home
+    url: /
+    icon: "home"
+  - title: Chat Archive
+    url: /posts/
+    icon: "message-circle"
+
+# Theme settings - ChatGPT inspired
+theme_color: "#10a37f"
+accent_color: "#19c37d"
+
+# Social links - Updated for atrajit.one domain
+social:
+  email: chatgpt@atrajit.one
+
+# Plugin settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: page
+
+# Exclude from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Ads completely removed for clean experience
