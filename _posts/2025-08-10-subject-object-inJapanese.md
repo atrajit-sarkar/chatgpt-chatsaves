@@ -30,3 +30,15 @@ English: Hana eats rice.
 | Romaji   | Hana | wa | gohan  | o  | tabemasu |
 | English  | (name) | (subject marker) | rice | (object marker) | eats |
 
+
+### Verb form
+
+Writing any root verb form in english starts with `to`.
+In japanese in place of to we use `る`\\
+Now, `love` noun form in japanese is `あい` and verb form is `あいす`　hence to demonstrate root verb form we have to say `to love` that is `あいする`. 　
+
+#### Present tense:
+In present tense we use `ます` after a root verb form ommiting ofcourse (`る`)`to`. Henece **I love japan** becomes in japanese *わたし は にほん を あいします*.
+
+- Present continuous:
+to use `ing` we use `てい`. So *I am loving Japan* or *I currenly love japan* will be *わたし は にほん を あいしています*
