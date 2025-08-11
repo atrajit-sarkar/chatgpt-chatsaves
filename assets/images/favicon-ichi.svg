@@ -17,8 +17,10 @@
     </filter>
   </defs>
   <!-- Center the text visually; transparent background -->
-  <text x="32" y="44" text-anchor="middle"
-        font-family="'Inter','Noto Sans JP','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif"
-        font-weight="700" font-size="40" fill="url(#ichiGradient)"
-        stroke="#92400e" stroke-width="0.9" paint-order="stroke" filter="url(#textGlow)" >いち</text>
+  <!-- Added internal padding: slightly smaller font-size + lower baseline to avoid cropping when rasterized to 16px.
+    This prevents top/bottom edge clipping some browsers showed with aggressive scaling. -->
+  <text x="32" y="46" text-anchor="middle"
+     font-family="'Inter','Noto Sans JP','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif"
+     font-weight="700" font-size="36" fill="url(#ichiGradient)"
+     stroke="#92400e" stroke-width="0.8" paint-order="stroke" filter="url(#textGlow)" >いち</text>
 </svg>
