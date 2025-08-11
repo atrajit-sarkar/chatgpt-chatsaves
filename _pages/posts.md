@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Chat Archive
-subtitle: Curated AI Conversations & Wisdom
+subtitle: Curated Conversations & Wisdom
 permalink: /posts/
 ---
 
@@ -14,7 +14,7 @@ permalink: /posts/
       <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
       <div class="post-meta">
         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
-        <span class="chat-indicator">💬 AI Chat</span>
+  <span class="chat-indicator">💬 Chat</span>
         {% if post.categories.size > 0 %}
           <span class="post-categories">
             {% for category in post.categories %}
@@ -46,7 +46,7 @@ permalink: /posts/
 {% if site.posts.size == 0 %}
 <div class="no-posts">
   <h3>No conversations yet</h3>
-  <p>We're building our archive of meaningful AI conversations. Check back soon for interesting chats about everything from quantum physics to pizza planning! 🤖✨</p>
+  <p>We're building our archive of meaningful conversations. Check back soon for interesting chats about everything from quantum physics to pizza planning! ✨</p>
 </div>
 {% endif %}
 

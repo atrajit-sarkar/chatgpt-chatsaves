@@ -1,22 +1,22 @@
 # Site settings
-title: ChatGPT Chat Saves - AI Conversation Archive
-email: chatgpt@atrajit.one
+title: All in いち | Conversations Archive
+email: ichi@atrajit.one
 description: >-
-  Your personal archive for ChatGPT conversations ✨ | Save, organize, and revisit your AI chats
-  A collaborative space where friends share and explore meaningful AI conversations
+  Your personal archive for conversations ✨ | Save, organize, and revisit your chats
+  A collaborative space where friends share and explore meaningful exchanges
 baseurl: "" # Only if using project site, leave empty for personal site
 url: "https://www.atrajit.one"
 
 # Author information
 author:
-  name: ChatGPT Chat Saves
-  email: chatgpt@atrajit.one
-  tagline: "AI Conversations | Shared Wisdom | Friend Quest"
-  subtitle: "Where AI Meets Human Curiosity"
+  name: All in いち
+  email: ichi@atrajit.one
+  tagline: "Chats | Shared Wisdom | Friend Quest"
+  subtitle: "Where Intelligence Meets Curiosity"
   bio: >-
-    A collaborative platform for storing and sharing meaningful ChatGPT conversations.
-    Join our friend quest to explore the depths of AI-human interaction and discover
-    the wisdom hidden in our daily chats with artificial intelligence.
+    A collaborative platform for storing and sharing meaningful conversations.
+    Join our friend quest to explore the depth of human dialogue and discover
+    the wisdom hidden in everyday chats.
 
 # Tech Stack - Removed since this is now a chat storage site
 # Keeping the structure for potential future features
@@ -47,13 +47,13 @@ navigation:
     url: /posts/
     icon: "message-circle"
 
-# Theme settings - ChatGPT inspired
+# Theme settings - Minimal chat archive theme
 theme_color: "#10a37f"
 accent_color: "#19c37d"
 
 # Social links - Updated for atrajit.one domain
 social:
-  email: chatgpt@atrajit.one
+  email: ichi@atrajit.one
 
 # Plugin settings
 plugins:

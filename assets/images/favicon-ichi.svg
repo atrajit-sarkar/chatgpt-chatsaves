@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title desc">
+  <title id="title">いち favicon</title>
+  <desc id="desc">Transparent background favicon showing stylized gradient いち with glow.</desc>
+  <defs>
+    <linearGradient id="ichiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="45%" stop-color="#fcd34d"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="textGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.2" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 1  0 0 0 0 0.86  0 0 0 0 0.35  0 0 0 0.6 0" result="glow"/>
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Center the text visually; transparent background -->
+  <text x="32" y="44" text-anchor="middle"
+        font-family="'Inter','Noto Sans JP','Hiragino Kaku Gothic ProN','Segoe UI',sans-serif"
+        font-weight="700" font-size="40" fill="url(#ichiGradient)"
+        stroke="#92400e" stroke-width="0.9" paint-order="stroke" filter="url(#textGlow)" >いち</text>
+</svg>

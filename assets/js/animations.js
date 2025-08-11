@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingText = document.querySelector('.typing-text');
     if (typingText) {
         const phrases = [
-            'AI Conversations Archive 🤖',
+            'Conversations Archive 🗂️',
             'Where Chats Become Wisdom ✨',
             'Friend Quest: Chat Together 👥',
-            'Save • Share • Explore AI Conversations',
-            'Your Personal ChatGPT Library 📚'
+            'Save • Share • Explore Conversations',
+            'Your Personal Chat Library 📚'
         ];
         
         let currentPhrase = 0;
@@ -307,6 +307,61 @@ window.addEventListener('load', function() {
     // Force scroll to top one more time after everything loads
     window.scrollTo(0, 0);
 });
+
+// ================================
+// HERO CURSOR GLOW EFFECT (added)
+// ================================
+function initHeroCursorGlow() {
+    const hero = document.querySelector('.hero-section');
+    if (!hero) return;
+    // Prevent duplicate cursor
+    if (document.querySelector('.custom-cursor-glow')) return;
+
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor-glow';
+    cursor.style.cssText = `
+        position: fixed;
+        width: 24px;
+        height: 24px;
+        background: radial-gradient(circle, rgba(16,163,127,0.85) 0%, rgba(16,163,127,0.2) 55%, transparent 70%);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 9999;
+        mix-blend-mode: screen;
+        transition: transform 0.15s ease, background 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        filter: drop-shadow(0 0 6px rgba(16,163,127,0.6));
+    `;
+    document.body.appendChild(cursor);
+
+    const activate = () => { cursor.style.opacity = '1'; };
+    const deactivate = () => { cursor.style.opacity = '0'; };
+    const move = (e) => {
+        cursor.style.left = (e.clientX - 12) + 'px';
+        cursor.style.top = (e.clientY - 12) + 'px';
+    };
+
+    hero.addEventListener('mouseenter', activate);
+    hero.addEventListener('mouseleave', deactivate);
+    hero.addEventListener('mousemove', move);
+
+    // Scale / color shift over interactive elements
+    const interactive = hero.querySelectorAll('a, button, .btn, .hero-image, .dual-profile-container img');
+    interactive.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            cursor.style.transform = 'scale(2)';
+            cursor.style.background = 'radial-gradient(circle, rgba(255,126,0,0.9) 0%, rgba(255,126,0,0.25) 55%, transparent 70%)';
+            cursor.style.filter = 'drop-shadow(0 0 8px rgba(255,126,0,0.7))';
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.style.transform = 'scale(1)';
+            cursor.style.background = 'radial-gradient(circle, rgba(16,163,127,0.85) 0%, rgba(16,163,127,0.2) 55%, transparent 70%)';
+            cursor.style.filter = 'drop-shadow(0 0 6px rgba(16,163,127,0.6))';
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initHeroCursorGlow);
 
 // Lazy loading for images
 if ('IntersectionObserver' in window) {

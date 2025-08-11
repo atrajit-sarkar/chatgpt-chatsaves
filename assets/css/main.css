@@ -1,6 +1,6 @@
-/* CSS Variables for ChatGPT Chat Archive Site */
+/* CSS Variables for Chat Archive Site */
 :root {
-    /* ChatGPT Brand Colors */
+    /* Brand Colors */
     --primary-color: #10a37f;
     --primary-dark: #0d8a6b;
     --secondary-color: #19c37d;
@@ -89,7 +89,7 @@
     --blockquote-border: #10a37f;
 }
 
-/* Dark theme variables - ChatGPT Dark Mode */
+/* Dark theme variables */
 [data-theme="dark"] {
     /* Text Colors */
     --text-primary: #ececf1;
@@ -513,6 +513,53 @@ a:hover {
     animation: wave 2s ease-in-out infinite;
     transform-origin: 70% 70%;
     display: inline-block;
+}
+
+/* Hero title with inline logo */
+.hero-with-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* tighter so it fits */
+    flex-wrap: nowrap; /* keep one line */
+    white-space: nowrap; /* prevent wrapping */
+}
+
+/* Slightly reduce text size (after the logo) so whole phrase fits one line */
+.hero-with-logo .welcome-text,
+.hero-with-logo .text-gradient {
+    font-size: 0.9em;
+    line-height: 1.05;
+}
+
+@media (max-width: 640px) {
+    .hero-with-logo .welcome-text,
+    .hero-with-logo .text-gradient { font-size: 0.85em; }
+}
+
+.hero-logo img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    animation: heroLogoFloat 6s ease-in-out infinite;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.05), 0 8px 18px -6px rgba(0,0,0,0.45), 0 0 22px -2px rgba(99,102,241,0.55);
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), rgba(255,255,255,0));
+}
+
+.hero-logo img:hover {
+    animation-play-state: paused;
+    transform: scale(1.04) rotate(3deg);
+}
+
+@keyframes heroLogoFloat {
+    0%, 100% { transform: translateY(0); }
+    25% { transform: translateY(-6px); }
+    50% { transform: translateY(0); }
+    75% { transform: translateY(4px); }
+}
+
+@media (max-width: 640px) {
+    .hero-logo img { width: 58px; height: 58px; }
+    .hero-with-logo { gap: 0.75rem; }
 }
 
 .hero-title {
@@ -1101,6 +1148,9 @@ a:hover {
     .hero-section {
         min-height: auto;
         padding: var(--space-16) 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
     
     .hero-image {
@@ -1145,6 +1195,21 @@ a:hover {
         grid-column: 1 / -1;
     }
 }
+
+/* Mobile-first stacking & centering for hero when grid collapses */
+@media (max-width: 1024px) {
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-image-container { order: 0; }
+    .hero-text { order: 1; text-align: center; }
+}
+
+/* Custom cursor (fallback style if JS inserts element) */
+.custom-cursor-glow { pointer-events: none; }
 
 /* Animations */
 @keyframes float {
@@ -1340,9 +1405,30 @@ a:hover {
 
 .nav-logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
     text-decoration: none !important;
-    text-align: center;
+}
+
+.nav-logo .logo-symbol {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(255,255,255,0.08), 0 4px 10px -2px rgba(0,0,0,0.4);
+    transition: transform 0.4s ease, filter 0.4s ease;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.15), rgba(255,255,255,0));
+}
+
+.nav-logo:hover .logo-symbol {
+    transform: rotate(8deg) scale(1.05);
+    filter: drop-shadow(0 0 6px rgba(99,102,241,0.6));
+}
+
+.logo-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
 }
 
 .logo-text {
@@ -2557,6 +2643,12 @@ table a:hover {
     blockquote p {
         margin-left: 1.5rem;
     }
+}
+
+@media (max-width: 520px) {
+    .nav-logo .logo-symbol { width: 40px; height: 40px; }
+    .logo-text { font-size: 1.15rem; }
+    .logo-subtitle { font-size: 0.65rem; }
 }
 
 /* Better focus states for accessibility */
@@ -4250,7 +4342,7 @@ input[type="checkbox"] {
     }
 }
 
-/* ChatGPT Saves Custom Animations */
+/* All in いち Custom Animations */
 @keyframes connection-pulse {
     0% { 
         background: linear-gradient(90deg, #10a37f, #19c37d, #10a37f);

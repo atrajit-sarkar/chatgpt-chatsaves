@@ -26,9 +26,12 @@ layout: home
             
             <div class="hero-text">
                 <div class="typing-animation">
-                    <h1 class="hero-title">
-                        <span class="wave">🤖</span> Welcome to
-                        <span class="text-gradient">ChatGPT Saves</span>
+                    <h1 class="hero-title hero-with-logo">
+                        <span class="hero-logo">
+                            <img src="/assets/images/logo-all-in-ichi.svg" alt="All in いち logo" width="72" height="72" loading="eager" />
+                        </span>
+                        <span class="welcome-text">Welcome to</span>
+                        <span class="text-gradient">All in いち</span>
                     </h1>
                     <div class="typing-container">
                         <span class="typing-text"></span>
@@ -37,9 +40,9 @@ layout: home
                 </div>
                 
                 <p class="hero-description">
-                    <strong>Where AI Conversations Live Forever ✨</strong><br>
-                    Your personal archive for meaningful ChatGPT conversations. 
-                    Join our friend quest to explore, save, and share the wisdom of AI interactions.
+                    <strong>Where Conversations Live Forever ✨</strong><br>
+                    Your personal archive for meaningful chats. 
+                    Collect, save, and revisit every exchange in one place.
                 </p>
                 
                 <div class="hero-stats">
@@ -79,7 +82,7 @@ layout: home
         <div class="section-header">
             <h2 class="section-title">
                 <span class="section-emoji">✨</span>
-                Why Save Your AI Conversations?
+                Why Save Your Conversations?
             </h2>
             <p class="section-description">
                 Transform fleeting chats into lasting wisdom
@@ -92,7 +95,7 @@ layout: home
                     <span>💾</span>
                 </div>
                 <h3>Archive Forever</h3>
-                <p>Never lose a valuable conversation again. Store all your ChatGPT interactions in one secure place.</p>
+                <p>Never lose a valuable conversation again. Store all your chats in one secure place.</p>
             </div>
             
             <div class="feature-card">
@@ -116,7 +119,7 @@ layout: home
                     <span>📚</span>
                 </div>
                 <h3>Knowledge Base</h3>
-                <p>Build your personal AI knowledge library and revisit insights whenever you need them.</p>
+                <p>Build your personal knowledge library and revisit insights whenever you need them.</p>
             </div>
         </div>
     </div>
